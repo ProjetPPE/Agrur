@@ -9,13 +9,14 @@ public class Commande {
     private Date dateConditionnement;
     private Date dateEnvoi;
     
+    
     //constructeur
-    public Commande(int unId, float unPrixHt, String unConditionnement, int uneQuantite, Date uneDateConditionnement){
+    public Commande(int unId, float unPrixHt, String unConditionnement, int uneQuantite, Date uneDateConditionnement, Produit unProduit){
         this.id = unId;
         this.prixHt = unPrixHt;
         this.conditionnement = unConditionnement;
         this.quantite = uneQuantite;
-        this.leProduit = new Produit();
+        this.leProduit = unProduit;
         this.dateConditionnement = uneDateConditionnement;
         this.dateEnvoi = null;
     }
@@ -47,6 +48,11 @@ public class Commande {
     
     public Date getDateEnvoi(){
         return this.dateEnvoi;
+    }
+    
+    //setteur
+    public void setDateEnvoi(Date uneDate){
+    	this.dateEnvoi = uneDate;
     }
     
     //retourne vrai si la commande n'est pas encore expédiée, faux sinon.

@@ -4,7 +4,7 @@ public class Produit {
     private String type; //exemple "fraîche entière"
     private int calibre; //exemple : 2
     
-    public Produit(){ //Constructeur
+    public Produit(  String variete, String type, int calibre){ //Constructeur
         this.calibre=calibre; 
         this.type=type;
         this.variete=variete;
